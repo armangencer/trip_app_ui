@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:trip_flutter_app/app/const/assets.dart';
 import 'package:trip_flutter_app/app/const/constant.dart';
 import 'package:trip_flutter_app/screens/category_widget.dart';
+import 'package:trip_flutter_app/screens/destination_widget.dart';
+import 'package:trip_flutter_app/screens/detail_screen.dart';
 
 import '../components/search_bar.dart';
 import '../components/tab_widget.dart';
@@ -97,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                           'TURKEY',
                           style: regular.copyWith(fontSize: 15),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                       ],
@@ -108,7 +110,39 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
-              child: SizedBox(child: CategoryWidget()),
+              child: SizedBox(
+                child: CategoryWidget(),
+              ),
+            ),
+            const SizedBox(),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Top Destinations',
+                    style: bold.copyWith(fontSize: 15),
+                  ),
+                  const Spacer(),
+                  Text(
+                    'TURKEY',
+                    style: regular.copyWith(fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
+            ),
+            GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const DetailScreen(),
+                ),
+              ),
+              child: DestinationWidget(),
             ),
           ]),
         ),

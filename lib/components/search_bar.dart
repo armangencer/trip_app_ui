@@ -15,7 +15,7 @@ class SearchBar extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            height: 40,
+            height: 35,
             child: TextField(
               cursorColor: black,
               style: regular.copyWith(
@@ -26,8 +26,7 @@ class SearchBar extends StatelessWidget {
                 prefixIcon: const Icon(Icons.search, color: grey),
                 hintText: 'Search',
                 hintStyle: const TextStyle(color: grey),
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: const BorderSide(color: Colors.black),

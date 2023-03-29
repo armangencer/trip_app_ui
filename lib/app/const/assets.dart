@@ -6,3 +6,5 @@ const String icons = '$assets/icons';
 const String menuIcon = '$icons/menu.png';
 const String avatar = '$images/arman.jpeg';
 const String filterIcon = '$icons/filter.png';
+const String location = '$icons/location.png';
+const String backgroundImage = '$images/background.png';
